@@ -1,0 +1,351 @@
+/* =========================================================
+   SUKAL – feuille de style
+   ---------------------------------------------------------
+   IMAGES DE FOND : déposez vos photos dans un dossier "images"
+   à côté de index.html, puis changez les deux noms ci-dessous.
+   Si une image est absente, la couleur de secours s'affiche.
+   ========================================================= */
+:root {
+    --img-entete: url("images/entete.jpg");  /* derrière le mot SUKAL */
+    --img-fond:   url("images/fond.jpg");    /* fond de toute la page */
+    --voile-fond: 0.1;
+    --opacite-cartes: 0.78;
+    --bg-color: #fbf9f6;
+    --text-main: #2c2c2c;
+    --accent-color: #6a1a21;
+    --accent-orange: #e67e22;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --font-display: 'Fredoka', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h, 80px) + 16px);
+    scrollbar-gutter: stable;   /* évite le saut de page quand la lightbox s'ouvre */
+}
+
+/* ---------- Fond de page ---------- */
+body {
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    overflow-x: clip;   /* jamais de défilement horizontal parasite (garde la barre collante) */
+}
+
+/* Image de fond : calque fixe (fluide au défilement, contrairement à background-attachment: fixed) */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(251, 249, 246, 0.86), rgba(251, 249, 246, 0.92)),
+        var(--img-fond);
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+}
+
+/* ---------- En-tête avec image derrière SUKAL ---------- */
+.entete {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: var(--accent-color);
+    background-image:
+        linear-gradient(rgba(106, 26, 33, 0.72), rgba(60, 10, 15, 0.82)),
+        var(--img-entete);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo-container h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -2px;
+    line-height: 1.05;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.logo-container p {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Barre de navigation ---------- */
+.menu-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(106, 26, 33, 0.15);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    white-space: nowrap;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover { background-color: rgba(106, 26, 33, 0.08); color: var(--accent-color); }
+.nav-link.active { color: #fff; background-color: var(--accent-color); }
+.nav-indicator { display: none; }
+
+/* Sur mobile : une seule ligne qu'on fait défiler du doigt */
+@media (max-width: 767px) {
+    .menu-nav { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; }
+}
+
+/* ---------- Grille du menu ---------- */
+.menu-container { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; }
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .menu-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
+}
+
+.menu-category {
+    min-width: 0;
+    background: #fff;
+    padding: 2.5rem;
+    border: 3px solid var(--text-main);
+    border-radius: 20px;
+    box-shadow: 8px 8px 0 var(--accent-color);
+    position: relative;
+}
+
+.menu-category h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--text-main);
+}
+
+/* ---------- Liste des plats ---------- */
+.menu-list { list-style: none; }
+
+.menu-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    min-height: 4.2rem;         /* même hauteur avec ou sans photo : pas de saut au défilement */
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.menu-list li::after {              /* pointillés */
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.item-name {
+    flex-grow: 1;
+    font-weight: 600;
+    background-color: #fff;
+    padding-right: 10px;
+    max-width: 75%;
+    z-index: 2;
+}
+
+.item-price {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: #fff;
+    padding: 0 10px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+/* ---------- Photos des plats (miniatures cliquables) ---------- */
+.plat-photo {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    cursor: zoom-in;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 2;
+}
+
+.plat-photo:hover,
+.plat-photo:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* ---------- Bouton + ---------- */
+.btn-ajouter {
+    background-color: #fff;
+    color: var(--text-main);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.btn-ajouter:hover { background-color: var(--accent-orange); color: #fff; transform: translateY(-4px); }
+.btn-ajouter:active { transform: translateY(-1px); }
+.btn-ajouter:focus-visible { outline: 3px solid var(--accent-orange); outline-offset: 2px; }
+
+.plat-selectionne { background-color: #fcf3eb; border-radius: 8px; }
+
+/* ---------- Bouton Commander ---------- */
+#panier-flottant { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+
+#btn-commander {
+    background-color: #25D366;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 15px 25px;
+    border: 3px solid var(--text-main);
+    border-radius: 30px;
+    box-shadow: 5px 5px 0 var(--text-main);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+#btn-commander:active { transform: translate(5px, 5px); box-shadow: 0 0 0 var(--text-main); }
+
+.cache { display: none !important; }
+
+/* ---------- Pied de page ---------- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-family: var(--font-heading);
+}
+
+/* ---------- Apparition au défilement ---------- */
+.reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* =========================================================
+   LIGHTBOX : photo agrandie au clic
+   ========================================================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(20, 5, 8, 0.88);
+    animation: lb-fondu 0.2s ease;
+}
+
+.lightbox figure { max-width: min(92vw, 900px); text-align: center; }
+
+.lightbox figure img {
+    max-width: 100%;
+    max-height: 78vh;
+    border-radius: 14px;
+    border: 3px solid #fff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    animation: lb-zoom 0.25s ease;
+}
+
+.lightbox figcaption {
+    margin-top: 0.8rem;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+}
+
+.lightbox button {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.lightbox button:hover,
+.lightbox button:focus-visible { background: var(--accent-orange); outline: none; }
+
+.lightbox-fermer { position: absolute; top: 14px; right: 14px; width: 46px; height: 46px; font-size: 2rem; line-height: 1; }
+.lightbox-nav { width: 46px; height: 46px; flex-shrink: 0; font-size: 2rem; line-height: 1; }
+
+@media (max-width: 600px) {
+    .lightbox { gap: 0.4rem; padding: 0.5rem; }
+    .lightbox-nav { width: 38px; height: 38px; font-size: 1.6rem; }
+}
+
+@keyframes lb-fondu { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lb-zoom  { from { transform: scale(0.9); } to { transform: scale(1); } }
+
+/* ---------- Accessibilité : moins d'animations si demandé ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .lightbox, .lightbox figure img { animation: none; }
+}
+
+/* ---------- Téléphone : plats plus compacts (évite les noms écrasés et les lignes trop hautes) ---------- */
+@media (max-width: 767px) {
+    .menu-container { padding: 0 0.75rem; margin: 2rem auto; }
+    .menu-grid { gap: 2rem; }
+    .menu-category { padding: 1.5rem 1rem; box-shadow: 5px 5px 0 var(--accent-color); }
+    .plat-photo { width: 52px; height: 52px; margin-right: 10px; }
+    .item-name { min-width: 0; max-width: none; overflow-wrap: anywhere; font-size: 0.95rem; }
+    .item-price { padding: 0 6px; font-size: 0.9rem; }
+}

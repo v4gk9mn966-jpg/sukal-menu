@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUKAL – Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="entete">
+    <div class="logo-container">
+        <h1>SUKAL</h1>
+        <p>L'art de la table</p>
+    </div>
+</header>
+<nav class="menu-nav" id="menu-nav">
+    <a href="#dej" class="nav-link">Petits Déjeuners</a>
+    <a href="#sandwichs" class="nav-link">Sandwichs</a>
+    <a href="#Salades" class="nav-link">Salades</a>
+    <a href="#plats" class="nav-link">Plats</a>
+    <a href="#boissons" class="nav-link">Boissons</a>
+    <a href="#panini" class="nav-link">Paninis</a>
+    <a href="#petitsplaisirs" class="nav-link">Petits plaisirs</a>
+    <a href="#frappe" class="nav-link">Frappés</a>
+    <a href="#baguette" class="nav-link">Baguettes gratinées</a>
+    <a href="#a-partager" class="nav-link">À partager</a>
+    <span class="nav-indicator"></span>
+</nav>
+<main class="menu-container">
+    
+    <div class="menu-grid">
+        <section class="menu-category reveal" id="dej">
+            <h2>Nos Petits Déjeuners</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="oeuf bene.jpg" alt="Œufs Bénédicte" loading="lazy" tabindex="0"><span class="item-name">Œufs Bénédicte</span><span class="item-price">7 000 F</span>
+                    <button class="btn-ajouter" data-nom="oeufs Bénédicte" data-prix="7000">+</button></li>
+                <li><img class="plat-photo" src="oeuf au plat.jpg" alt="Œuf au plat" loading="lazy" tabindex="0"><span class="item-name">Œuf au plat</span><span class="item-price">2 500 F</span>
+                 <button class="btn-ajouter" data-nom="Œuf au plat" data-prix="2500">+</button></li>
+                <li><img class="plat-photo" src="oeuf brou.jpg" alt="Œufs brouillés" loading="lazy" tabindex="0"><span class="item-name">Œufs brouillés</span><span class="item-price">3 500 F</span>
+                 <button class="btn-ajouter" data-nom="oeufs brouillés" data-prix="3500">+</button></li>
+                <li><img class="plat-photo" src="nature.jpg" alt="Omelette nature" loading="lazy" tabindex="0"><span class="item-name">Omelette nature</span><span class="item-price">2 500 F</span>
+                 <button class="btn-ajouter" data-nom="Omelette nature" data-prix="2500">+</button></li>
+                <li><img class="plat-photo" src="fromage.jpg" alt="Omelette fromage ou jambon" loading="lazy" tabindex="0"><span class="item-name">Omelette fromage ou jambon</span><span class="item-price">3 500 F</span> 
+                 <button class="btn-ajouter" data-nom="Omelette fromage ou jambon" data-prix="3500">+</button></li>
+                <li><img class="plat-photo" src="jambon fromage.jpg" alt="Omelette jambon fromage" loading="lazy" tabindex="0"><span class="item-name">Omelette jambon fromage</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="Omelette jambon fromage" data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/eggs-muffin.jpg" alt="Eggs muffin" loading="lazy" tabindex="0"><span class="item-name">Eggs muffin</span><span class="item-price">4 500 F</span> 
+                    <button class="btn-ajouter" data-nom="Eggs muffin" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/english-breakfast.jpg" alt="English breakfast" loading="lazy" tabindex="0"><span class="item-name">English breakfast</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="English breakfast" data-prix="6000">+</button></li>
+            </ul>
+        </section>
+        <section class="menu-category reveal" id="Salades">
+            <h2>Nos Salades</h2>
+            <ul class="menu-list">
+                <li> <img class="plat-photo" src="images/plats/salade cesar.JPG" alt="Salade César" loading="lazy" tabindex="0"><span class="item-name">Salade César</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="Salade cesar" data-prix="6000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/salade-parisienne.jpg" alt="Salade Parisienne" loading="lazy" tabindex="0"><span class="item-name">Salade Parisienne</span><span class="item-price">5 500 F</span> 
+                 <button class="btn-ajouter" data-nom="salade Parisienne" data-prix="5500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/salade-nicoise.jpg" alt="Salade Niçoise" loading="lazy" tabindex="0"><span class="item-name">Salade Niçoise</span><span class="item-price">5 500 F</span>
+                 <button class="btn-ajouter" data-nom="salade Niçoise" data-prix="5500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/salade nordique.jpg" alt="Salade Nordique" loading="lazy" tabindex="0"><span class="item-name">Salade Nordique</span><span class="item-price">7 500 F</span>
+                 <button class="btn-ajouter" data-nom="salade nordique" data-prix="7500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/salade-thai.jpg" alt="Salade Thaï" loading="lazy" tabindex="0"><span class="item-name">Salade Thaï</span><span class="item-price">6 500 F</span>
+                 <button class="btn-ajouter" data-nom="Salade Thaï" data-prix="6500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/salade-du-soleil.jpg" alt="Salade du soleil" loading="lazy" tabindex="0"><span class="item-name">Salade du soleil</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="Salade soleil" data-prix="6000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/salade-rotini.jpg" alt="Salade Rotini" loading="lazy" tabindex="0"><span class="item-name">Salade Rotini</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="Salade Rotini" data-prix="6000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/salade italienne.jpg" alt="Salade Italienne" loading="lazy" tabindex="0"><span class="item-name">Salade Italienne</span><span class="item-price">9 500 F</span>
+                 <button class="btn-ajouter" data-nom="Salade Italienne" data-prix="9500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/salade-de-chevre-chaud.jpg" alt="Salade de chèvre chaud" loading="lazy" tabindex="0"><span class="item-name">Salade de chèvre chaud</span><span class="item-price">7 500 F</span>
+                 <button class="btn-ajouter" data-nom="Salade de chèvre chaud" data-prix="7500">+</button></li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="menu-grid">
+        <section class="menu-category reveal" id="sandwichs">
+            <h2>Nos Sandwichs</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="images/plats/sd-filet.jpg" alt="Sandwich filet de bœuf" loading="lazy" tabindex="0"><span class="item-name">Sandwich filet de bœuf</span><span class="item-price">5 000 F</span>
+                 <button class="btn-ajouter" data-nom="Sandwich filet de bœuf" data-prix="5000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/sandwich-jambon-crudites.jpg" alt="Sandwich jambon crudités" loading="lazy" tabindex="0"><span class="item-name">Sandwich jambon crudités</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="sandwich jambon crudités" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/sandwich-jambon-emmental.jpg" alt="Sandwich jambon emmental" loading="lazy" tabindex="0"><span class="item-name">Sandwich jambon emmental</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="sandwich jambon emmental " data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/sandwich-caprese.jpg" alt="Sandwich caprese" loading="lazy" tabindex="0"><span class="item-name">Sandwich caprese</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="Sandwich caprese" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/sandwich-poulet-crudites.jpg" alt="Sandwich poulet crudités" loading="lazy" tabindex="0"><span class="item-name">Sandwich poulet crudités</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="Sandwich poulet crudités" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/sandwich-poulet-emmental.jpg" alt="Sandwich poulet emmental" loading="lazy" tabindex="0"><span class="item-name">Sandwich poulet emmental</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="sandwich poulet emmental" data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/sandwich-thon-crudites.jpg" alt="Sandwich thon crudités" loading="lazy" tabindex="0"><span class="item-name">Sandwich thon crudités</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="sandwich thon crudités" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/sandwich-saumon-avocat.jpg" alt="Sandwich saumon avocat" loading="lazy" tabindex="0"><span class="item-name">Sandwich saumon avocat</span><span class="item-price">5 500 F</span>
+                 <button class="btn-ajouter" data-nom="Sandwich saumon avocat" data-prix="5500">+</button></li>
+            </ul>
+        </section>
+
+        <section class="menu-category reveal" id="panini">
+            <h2>Nos Paninis</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="images/plats/panini-jambon.jpg" alt="Panini jambon" loading="lazy" tabindex="0"><span class="item-name">Panini jambon</span><span class="item-price">5 000 F</span>
+                 <button class="btn-ajouter" data-nom="Panini jambon" data-prix="5000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/panini-legumes-grilles.jpg" alt="Panini légumes grillés" loading="lazy" tabindex="0"><span class="item-name">Panini légumes grillés</span><span class="item-price">5 000 F</span>
+                 <button class="btn-ajouter" data-nom="Panini légumes grillés" data-prix="5000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/panini-poulet.jpg" alt="Panini poulet" loading="lazy" tabindex="0"><span class="item-name">Panini poulet</span><span class="item-price">5 000 F</span>
+                 <button class="btn-ajouter" data-nom="Panini poulet" data-prix="5000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/panini-thon.jpg" alt="Panini thon" loading="lazy" tabindex="0"><span class="item-name">Panini thon</span><span class="item-price">5 000 F</span>
+                 <button class="btn-ajouter" data-nom="Panini thon" data-prix="5000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/panini-viande-hachee.jpg" alt="Panini viande hachée" loading="lazy" tabindex="0"><span class="item-name">Panini viande hachée</span><span class="item-price">5 000 F</span>
+                 <button class="btn-ajouter" data-nom="Panini viande hachée" data-prix="5000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/panini-saumon.jpg" alt="Panini saumon" loading="lazy" tabindex="0"><span class="item-name">Panini saumon</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="Panini saumon" data-prix="6000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/panini-phillycheese-steak.jpg" alt="Panini phillycheese steak" loading="lazy" tabindex="0"><span class="item-name">Panini phillycheese steak</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="Panini phillycheese steak" data-prix="6000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/panini-3-fromages.jpg" alt="Panini 3 fromages" loading="lazy" tabindex="0"><span class="item-name">Panini 3 fromages</span><span class="item-price">5 500 F</span>
+                 <button class="btn-ajouter" data-nom="Panini 3 fromage" data-prix="5500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/panini-caprese.jpg" alt="Panini caprese" loading="lazy" tabindex="0"><span class="item-name">Panini caprese</span><span class="item-price">5 500 F</span>
+                 <button class="btn-ajouter" data-nom="Panini caprese" data-prix="5500">+</button></li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="menu-grid">
+        <section class="menu-category reveal" id="petitsplaisirs">
+            <h2>Nos Petits Plaisirs</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="images/plats/bagel-avocat-poulet-emmental-fromage-blanc.jpg" alt="Bagel avocat, poulet, emmental & fromage blanc" loading="lazy" tabindex="0"><span class="item-name">Bagel avocat, poulet, emmental & fromage blanc</span><span class="item-price">5 500 F</span>
+                 <button class="btn-ajouter" data-nom="bagel avocat;poulet" data-prix="5500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/bagel-avocat-jambon-emmental-fromage-blanc.jpg" alt="Bagel avocat, jambon, emmental & fromage blanc" loading="lazy" tabindex="0"><span class="item-name">Bagel avocat, jambon, emmental & fromage blanc</span><span class="item-price">5 500 F</span>
+                 <button class="btn-ajouter" data-nom="bagel jambon" data-prix="5500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/bagel-avocat-saumon-fromage-blanc.jpg" alt="Bagel avocat, saumon & fromage blanc" loading="lazy" tabindex="0"><span class="item-name">Bagel avocat, saumon & fromage blanc</span><span class="item-price">6 500 F</span>
+                 <button class="btn-ajouter" data-nom="bagel avocat saumon" data-prix="6500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/toast-nordique.jpg" alt="Toast nordique" loading="lazy" tabindex="0"><span class="item-name">Toast nordique</span><span class="item-price">5 000 F</span>
+                 <button class="btn-ajouter" data-nom=" Toast nordique" data-prix="5000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/croque-madame.jpg" alt="Croque madame" loading="lazy" tabindex="0"><span class="item-name">Croque madame</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="Croque madame" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/croque-monsieur.jpg" alt="Croque monsieur" loading="lazy" tabindex="0"><span class="item-name">Croque monsieur</span><span class="item-price">3 500 F</span>
+                 <button class="btn-ajouter" data-nom="Croque monsieur" data-prix="3500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/sandwich-aux-oeufs.jpg" alt="Sandwich aux œufs" loading="lazy" tabindex="0"><span class="item-name">Sandwich aux œufs</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="Sandwich aux oeufs" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/wrap-poulet.jpg" alt="Wrap poulet" loading="lazy" tabindex="0"><span class="item-name">Wrap poulet</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="Wrap poulet" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/wrap-filet-de-boeuf.jpg" alt="Wrap filet de bœuf" loading="lazy" tabindex="0"><span class="item-name">Wrap filet de bœuf</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="Wrap filet de boeuf" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/wrap-saumon.jpg" alt="Wrap saumon" loading="lazy" tabindex="0"><span class="item-name">Wrap saumon</span><span class="item-price">5 500 F</span>
+                 <button class="btn-ajouter" data-nom="Wrap saumon" data-prix="5500">+</button></li>
+            </ul>
+        </section>
+
+        <section class="menu-category reveal" id="baguette">
+            <h2>Nos Baguettes Gratinées</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="images/plats/la-tartiflette.jpg" alt="La tartiflette" loading="lazy" tabindex="0"><span class="item-name">La tartiflette</span><span class="item-price">6 500 F</span>
+                 <button class="btn-ajouter" data-nom="La tartiflette" data-prix="6500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/la-campione.jpg" alt="La campione" loading="lazy" tabindex="0"><span class="item-name">La campione</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="La campione" data-prix="6000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/la-3-fromages.jpg" alt="La 3 fromages" loading="lazy" tabindex="0"><span class="item-name">La 3 fromages</span><span class="item-price">6 500 F</span>
+                 <button class="btn-ajouter" data-nom="La 3 fromages" data-prix="6500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/la-chicken-bbq.jpg" alt="La chicken BBQ" loading="lazy" tabindex="0"><span class="item-name">La chicken BBQ</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="La chicken BBQ" data-prix="6000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/la-norvegienne.jpg" alt="La norvégienne" loading="lazy" tabindex="0"><span class="item-name">La norvégienne</span><span class="item-price">7 500 F</span>
+                 <button class="btn-ajouter" data-nom="La norvégienne" data-prix="7500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/l-orientale.jpg" alt="L'orientale" loading="lazy" tabindex="0"><span class="item-name">L'orientale</span><span class="item-price">6 000 F</span>
+                 <button class="btn-ajouter" data-nom="L'orientale" data-prix="6000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/la-sukal.jpg" alt="La Sukal" loading="lazy" tabindex="0"><span class="item-name">La Sukal</span><span class="item-price">6 500 F</span>
+                 <button class="btn-ajouter" data-nom="La sukal" data-prix="6500">+</button></li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="menu-grid">
+        <section class="menu-category reveal" id="plats">
+            <h2>Nos Plats</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="images/plats/filet-de-boeuf.jpg" alt="Filet de bœuf et sa sauce spéciale SUKAL" loading="lazy" tabindex="0"><span class="item-name">Filet de bœuf et sa sauce spéciale SUKAL</span><span class="item-price">8 500 F</span>
+                 <button class="btn-ajouter" data-nom="filet de boeuf" data-prix="8500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/capitaine-grille-sauce-tartare.jpg" alt="Capitaine grillé sauce tartare" loading="lazy" tabindex="0"><span class="item-name">Capitaine grillé sauce tartare</span><span class="item-price">9 000 F</span>
+                 <button class="btn-ajouter" data-nom="Capitaine grillé" data-prix="9000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/poulet-panees-sauce-sucree-salee.jpg" alt="Ailes de poulet panées sauce sucrée salée" loading="lazy" tabindex="0"><span class="item-name">Ailes de poulet panées sauce sucrée salée</span><span class="item-price">8 000 F</span>
+                 <button class="btn-ajouter" data-nom="ailes de poulet panées" data-prix="8000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/club-sandwich.jpg" alt="Club sandwich au poulet" loading="lazy" tabindex="0"><span class="item-name">Club sandwich au poulet</span><span class="item-price">7 500 F</span>
+                 <button class="btn-ajouter" data-nom="Club sandwich" data-prix="7500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/burger.jpg" alt="Burger signature" loading="lazy" tabindex="0"><span class="item-name">Burger signature</span><span class="item-price">8 000 F</span>
+                 <button class="btn-ajouter" data-nom="Burger signature" data-prix="8000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/tarte-du-soleil.jpg" alt="Tarte du soleil" loading="lazy" tabindex="0"><span class="item-name">Tarte du soleil</span><span class="item-price">10 500 F</span>
+                 <button class="btn-ajouter" data-nom="Tarte du soleil" data-prix="10500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/penne.jpg" alt="Penne Rigate" loading="lazy" tabindex="0"><span class="item-name">Penne Rigate</span><span class="item-price">8 500 F</span>
+                 <button class="btn-ajouter" data-nom="Penne Rigate" data-prix="8500">+</button></li>
+            </ul>
+        </section>
+
+        <section class="menu-category reveal" id="a-partager">
+            <h2>À Partager</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="images/plats/quesadillas-x12-viande-hachee-poulet-filet-de-boeuf.jpg" alt="Quesadillas x12 (Viande hachée, poulet, filet de bœuf)" loading="lazy" tabindex="0"><span class="item-name">Quesadillas x12 (Viande hachée, poulet, filet de bœuf)</span><span class="item-price">13 500 F</span>
+                 <button class="btn-ajouter" data-nom="Quesadillas" data-prix="13500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/bol-de-nachos.jpg" alt="Bol de Nachos" loading="lazy" tabindex="0"><span class="item-name">Bol de Nachos</span><span class="item-price">7 500 F</span>
+                 <button class="btn-ajouter" data-nom="Bol de Nachos" data-prix="7500">+</button></li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="menu-grid">
+        <section class="menu-category reveal" id="boissons">
+            <h2>Nos Boissons Froides</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="images/plats/ice-coffee.jpg" alt="Iced coffee (café glacé)" loading="lazy" tabindex="0"><span class="item-name">Iced coffee (café glacé)</span><span class="item-price">3 000 F</span>
+                 <button class="btn-ajouter" data-nom="Iced coffee" data-prix="3000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/iced-vanilla-coffee.jpg" alt="Iced vanilla coffee" loading="lazy" tabindex="0"><span class="item-name">Iced vanilla coffee</span><span class="item-price">3 500 F</span>
+                 <button class="btn-ajouter" data-nom="Iced vanilla coffee" data-prix="3500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/spanish.jpg" alt="Iced Spanish Coffee" loading="lazy" tabindex="0"><span class="item-name">Iced Spanish Coffee</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="Iced Spanish" data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/jus-dorange.jpg" alt="Jus d'orange pressé" loading="lazy" tabindex="0"><span class="item-name">Jus d'orange pressé</span><span class="item-price">2 000 F</span>
+                 <button class="btn-ajouter" data-nom="Jus d'orange" data-prix="2000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/jus-pomme.jpg" alt="Jus naturel pressé (Ananas ou pomme)" loading="lazy" tabindex="0"><span class="item-name">Jus naturel pressé (Ananas ou pomme)</span><span class="item-price">3 500 F</span>
+                 <button class="btn-ajouter" data-nom="jus naturel pressé pomme ou Ananas" data-prix="3500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/jus-detox.jpg" alt="Jus Detox" loading="lazy" tabindex="0"><span class="item-name">Jus Detox</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="jus Detox" data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/boissons-gazeuses.jpg" alt="Boissons gazeuses" loading="lazy" tabindex="0"><span class="item-name">Boissons gazeuses</span><span class="item-price">1 000 F</span>
+                 <button class="btn-ajouter" data-nom="boissons gazeuses" data-prix="1000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/jus-d-ananas.jpg" alt="Jus d'ananas" loading="lazy" tabindex="0"><span class="item-name">Jus d'ananas</span><span class="item-price">1 500 F</span>
+                 <button class="btn-ajouter" data-nom="jus d'ananas" data-prix="1500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/eau-petite.jpg" alt="Eau (petite)" loading="lazy" tabindex="0"><span class="item-name">Eau (petite)</span><span class="item-price">500 F</span>
+                 <button class="btn-ajouter" data-nom="Eau petite" data-prix="500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/eau-grande.jpg" alt="Eau (grande)" loading="lazy" tabindex="0"><span class="item-name">Eau (grande)</span><span class="item-price">1 000 F</span>
+                 <button class="btn-ajouter" data-nom="Eau grande" data-prix="1000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/perrier.jpg" alt="Perrier" loading="lazy" tabindex="0"><span class="item-name">Perrier</span><span class="item-price">1 500 F</span>
+                 <button class="btn-ajouter" data-nom="Perrier" data-prix="1500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/thes-glaces-dandi.jpg" alt="Thés glacés DANDI" loading="lazy" tabindex="0"><span class="item-name">Thés glacés DANDI</span><span class="item-price">2 500 F</span>
+                 <button class="btn-ajouter" data-nom="Thés glacés DANDI" data-prix="2500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/toufi.jpg" alt="Limonade Toufi" loading="lazy" tabindex="0"><span class="item-name">Limonade Toufi</span><span class="item-price">3 500 F</span>
+                 <button class="btn-ajouter" data-nom="Limonade Toufi" data-prix="3500">+</button></li>
+            </ul>
+        </section>
+
+        <section class="menu-category reveal" id="frappe">
+            <h2>Nos Frappés</h2>
+            <ul class="menu-list">
+                <li><img class="plat-photo" src="images/plats/frappobao-baobab.jpg" alt="FrappoBao (Baobab)" loading="lazy" tabindex="0"><span class="item-name">FrappoBao (Baobab)</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="FrappoBao" data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/frappuccino.jpg" alt="Frappuccino (Café)" loading="lazy" tabindex="0"><span class="item-name">Frappuccino (Café)</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="Frappuccino" data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/frappe-vanille.jpg" alt="Frappé vanille" loading="lazy" tabindex="0"><span class="item-name">Frappé vanille</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="Frappé vanille" data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/frappe-chocolat.jpg" alt="Frappé chocolat" loading="lazy" tabindex="0"><span class="item-name">Frappé chocolat</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="Frappé chocolat" data-prix="4000">+</button></li>
+                <li><img class="plat-photo" src="images/plats/speculos.jpg" alt="Frappé spéculos" loading="lazy" tabindex="0"><span class="item-name">Frappé spéculos</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="Frappé spéculos" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/frappe-oreo.jpg" alt="Frappé oréo" loading="lazy" tabindex="0"><span class="item-name">Frappé oréo</span><span class="item-price">4 500 F</span>
+                 <button class="btn-ajouter" data-nom="Frappé oréo" data-prix="4500">+</button></li>
+                <li><img class="plat-photo" src="images/plats/frappe-caramel.jpg" alt="Frappé caramel" loading="lazy" tabindex="0"><span class="item-name">Frappé caramel</span><span class="item-price">4 000 F</span>
+                 <button class="btn-ajouter" data-nom="Frappé caramel" data-prix="4000">+</button></li>
+            </ul>
+        </section>
+    </div>
+
+</main>
+<footer>
+    <p>© 2026 SUKAL Restaurant. Tous droits réservés.</p>
+</footer>
+<div id="panier-flottant" class="cache">
+    <button id="btn-commander">
+        Commander(<span id="compteur-article">0</span>)
+    </button>
+</div>
+<div id="lightbox" class="lightbox cache" role="dialog" aria-modal="true" aria-label="Photo du plat">
+    <button class="lightbox-fermer" type="button" aria-label="Fermer">&times;</button>
+    <button class="lightbox-nav lightbox-prec" type="button" aria-label="Photo précédente">&#8249;</button>
+    <figure>
+        <img id="lightbox-img" src="" alt="">
+        <figcaption id="lightbox-legende"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-suiv" type="button" aria-label="Photo suivante">&#8250;</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
